@@ -1,0 +1,30 @@
+print("=== PROGRAM NILAI MAHASISWA ===")
+
+nama = input("Nama mahasiswa: ")
+
+nilai_tugas = float(input("Nilai tugas: "))
+nilai_uts = float(input("Nilai UTS: "))
+nilai_uas = float(input("Nilai UAS: "))
+
+bobot_tugas = 30 / 100
+bobot_uts = 30 / 100
+bobot_uas = 40 / 100
+
+total_nilai = (
+    nilai_tugas * bobot_tugas
+    + nilai_uts * bobot_uts
+    + nilai_uas * bobot_uas
+)
+
+status = "Belum Lulus"
+
+if total_nilai >= 60:
+    status = "Lulus"
+
+print("\n=== HASIL NILAI MAHASISWA ===")
+print(f"Nama Mahasiswa : {nama}")
+print(f"Nilai Tugas    : {nilai_tugas}")
+print(f"Nilai UTS      : {nilai_uts}")
+print(f"Nilai UAS      : {nilai_uas}")
+print(f"Nilai Akhir    : {round(total_nilai, 2)}")
+print(f"Status         : {status}")
